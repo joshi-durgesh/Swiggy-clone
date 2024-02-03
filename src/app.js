@@ -5,8 +5,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 //components
 import Header from "./component/Header";
-import BannerSection from "./component/BannerSection";
-import TopBrandsSection from "./component/TopBrandsSection";
+import Body from "./component/Body";
 import Offers from "./component/Offers";
 import Search from "./component/Search";
 import Help from "./component/Help";
@@ -14,15 +13,6 @@ import SignIn from "./component/SignIn";
 import Cart from "./component/Cart";
 import ErrorPage from "./component/ErrorPage";
 import RestaurantMenu from "./component/RestaurantMenu";
-
-const Body = () => {
-  return (
-    <>
-      <BannerSection />
-      <TopBrandsSection />
-    </>
-  );
-};
 
 const MainContent = () => {
   return (

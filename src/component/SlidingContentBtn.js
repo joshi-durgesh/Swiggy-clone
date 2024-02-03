@@ -1,6 +1,6 @@
-const SlidingContentBtn = ({ side }) => {
+const SlidingContentBtn = ({ section, side }) => {
   return (
-    <button id={"banner-btn-" + side} className={"btn-arrow btn-" + side}>
+    <button id={section + "-btn-" + side} className={"btn-arrow btn-" + side}>
       <span className={"bi bi-arrow-" + side}></span>
     </button>
   );

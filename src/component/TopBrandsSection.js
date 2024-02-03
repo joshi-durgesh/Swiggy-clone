@@ -1,77 +1,21 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
-import { SWIGGY_API } from "../utils/constant";
-import { TopRestoSkimmers } from "./Skimmer";
+import SlidingContentBtn from "./SlidingContentBtn";
 
-const TopBrandsSection = () => {
-  const [TopBrands, SetTopBrands] = useState([]);
+const TopBrandsSection = ({ data }) => {
+  const { title } = data?.header;
+  const topBrands = data?.gridElements?.infoWithStyle?.restaurants;
 
-  const [AllBrands, SetAllBrands] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const [inputResto, SetInputResto] = useState("");
-
-  const fetchData = async () => {
-    const data = await fetch(SWIGGY_API);
-    const json = await data.json();
-    const brands =
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
-    SetTopBrands(brands);
-    SetAllBrands(brands);
-  };
-
-  return TopBrands.length === 0 ? (
-    <TopRestoSkimmers />
-  ) : (
-    <section className='top-brand-section'>
+  return (
+    <section className='top-brand-section section-commen'>
       <div className='about-banner'>
-        <h2>Top restaurant chains in Hyderabad</h2>
-
-        <div className='top-resto-search-bar'>
-          <input
-            type='text'
-            className='search-restaurant'
-            id='search-top-resto'
-            placeholder='Search for Restaurant'
-            value={inputResto}
-            onChange={(e) => {
-              return SetInputResto(e.target.value);
-            }}
-          />
-          <button
-            className='resto-search-btn'
-            onClick={() => {
-              const searchValue = document
-                .getElementById("search-top-resto")
-                .value.toLowerCase();
-
-              const searchData = AllBrands.filter((data) => {
-                return data.info.name.toLowerCase().includes(searchValue);
-              });
-              SetTopBrands(searchData);
-            }}
-          >
-            <span className='bi bi-search'></span>
-          </button>
+        <h2>{title}</h2>
+        <div className='btn-sliding'>
+          <SlidingContentBtn section='toresto' side='left' />
+          <SlidingContentBtn section='toresto' side='right' />
         </div>
-        <button
-          className='top-resto-btn'
-          onClick={() => {
-            const filterdData = TopBrands.filter((data) => {
-              return data.info.avgRating > 4;
-            });
-            SetTopBrands(filterdData);
-          }}
-        >
-          Top Restaurant
-        </button>
       </div>
       <div className='top-brand-container'>
-        {TopBrands.map((brandData) => (
+        {topBrands.map((brandData) => (
           <RestaurantCard
             key={brandData.info.id}
             resId={brandData.info.id}

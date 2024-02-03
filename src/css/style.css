@@ -151,7 +151,7 @@ header {
   margin-bottom: 1rem;
 }
 
-.btn-banner {
+.btn-sliding {
   display: flex;
   gap: 1rem;
 }
@@ -168,6 +168,10 @@ header {
 }
 
 .top-brand-section {
+  overflow: hidden;
+}
+
+.section-commen {
   max-width: 1150px;
   margin: 0 auto;
   padding-top: 2.5rem;
@@ -178,7 +182,6 @@ header {
 .resto-card {
   max-width: 260px;
   display: inline-block;
-  overflow: hidden;
   padding: 10px;
   transition: all 400ms;
 }
@@ -206,8 +209,7 @@ header {
 }
 .top-brand-container {
   display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .resto-detail-container {
@@ -433,4 +435,11 @@ header {
 .restaurant-rating span:last-child {
   padding: 2px;
   border-top: 1px solid grey;
+}
+
+.all-restaurant {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
 }
