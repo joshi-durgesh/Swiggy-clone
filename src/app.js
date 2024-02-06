@@ -1,5 +1,5 @@
 //Importing React in our JavaScript
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -12,7 +12,7 @@ import Help from "./component/Help";
 import SignIn from "./component/SignIn";
 import Cart from "./component/Cart";
 import ErrorPage from "./component/ErrorPage";
-import RestaurantMenu from "./component/RestaurantMenu";
+const RestaurantMenu = lazy(() => import("./component/RestaurantMenu"));
 
 const MainContent = () => {
   return (
@@ -56,7 +56,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/restaurant/:resId",
-        element: <RestaurantMenu />,
+        element: (
+          <Suspense>
+            <RestaurantMenu />
+          </Suspense>
+        ),
       },
     ],
   },

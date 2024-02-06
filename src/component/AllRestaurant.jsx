@@ -1,20 +1,10 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { SWIGGY_API } from "../utils/constant";
 
 const AllRestaurant = ({ data, title }) => {
   const [allRestoData] = useState(data);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/update"
-    );
-    const json = await data.json();
-    console.log(json);
-  };
 
   return (
     <section className='section-commen'>
