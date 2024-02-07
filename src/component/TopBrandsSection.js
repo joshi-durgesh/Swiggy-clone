@@ -7,15 +7,15 @@ const TopBrandsSection = ({ data }) => {
   console.log(title);
 
   return (
-    <section className='top-brand-section section-commen'>
-      <div className='about-banner'>
-        <h2>{title}</h2>
-        <div className='btn-sliding'>
+    <section className='max-w-6xl mx-auto overflow-hidden mt-7 p-2 pb-7 border-b-2 mb-6'>
+      <div className='flex justify-between mb-7'>
+        <h2 className='text-2xl font-bold'>{title}</h2>
+        <div className='flex gap-3'>
           <SlidingContentBtn section='toresto' side='left' />
           <SlidingContentBtn section='toresto' side='right' />
         </div>
       </div>
-      <div className='top-brand-container'>
+      <div className='flex gap-4'>
         {topBrands.map((brandData) => (
           <RestaurantCard
             key={brandData.info.id}

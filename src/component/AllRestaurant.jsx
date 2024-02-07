@@ -1,19 +1,15 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { SWIGGY_API } from "../utils/constant";
 
 const AllRestaurant = ({ data, title }) => {
   const [allRestoData] = useState(data);
 
   return (
-    <section className='section-commen'>
-      <div>
-        <h2>{title}</h2>
-      </div>
-      <div>buttons</div>
+    <section className='max-w-6xl mx-auto pb-7'>
+      <h2 className='text-2xl font-bold mb-4'>{title}</h2>
+      <div className='mb-3'>buttons</div>
 
-      <div className='all-restaurant'>
+      <div className='flex flex-wrap gap-2'>
         {allRestoData.map((data) => {
           return <RestaurantCard key={data.info.id} resData={data} />;
         })}

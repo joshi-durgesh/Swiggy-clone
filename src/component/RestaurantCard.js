@@ -7,19 +7,32 @@ const RestaurantCard = ({ resData }) => {
   const { slaString } = sla;
 
   return (
-    <Link className='resto-card' to={"/restaurant/" + id}>
-      <div className='resto-img-container'>
-        <img className='resto-card-img' src={CDN_URL + cloudinaryImageId} />
+    <Link
+      className='w-[280px] p-3  flex flex-col flex-none hover:scale-90 transition-all duration-300'
+      to={"/restaurant/" + id}
+    >
+      <div className='w-auto h-40 rounded-xl shadow-lg mb-3 overflow-hidden'>
+        <img
+          className='w-[260px] h-40 object-fill '
+          src={CDN_URL + cloudinaryImageId}
+        />
       </div>
-      <div className='resto-detail-container'>
-        <h3 className='resto-name overflow-text'>{name}</h3>
-        <div className='resto-rating'>
-          <span className='bi bi-star-fill star'></span>&nbsp;
+      <div className='ml-2'>
+        <h3 className='text-ellipsis w-[210px] text-nowrap overflow-hidden font-bold mb-1'>
+          {name}
+        </h3>
+        <div className='flex items-center font-bold'>
+          <span className='flex item-center justify-center w-5 h-5 rounded-full bg-green-700 '>
+            <span className='bi bi-star-fill  text-white  text-sm'></span>
+          </span>
+          &nbsp;
           {avgRating} <span className='bi bi-dot dot'></span>
           &nbsp; {slaString}
         </div>
-        <div className='overflow-text resto-cuisine'>{cuisines.join(",")}</div>
-        <div className='resto-area'>{areaName}</div>
+        <div className='overflow-hidden text-ellipsis text-nowrap w-[220px]'>
+          {cuisines.join(",")}
+        </div>
+        <div className=''>{areaName}</div>
       </div>
     </Link>
   );

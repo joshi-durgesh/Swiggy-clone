@@ -3,8 +3,8 @@ import { CDN_URL } from "../utils/constant";
 const BannerItem = ({ banData }) => {
   const { imageId } = banData;
   return (
-    <a href=''>
-      <img src={CDN_URL + imageId} className='banner-img' />
+    <a href className='flex-none w-[9rem]  block '>
+      <img src={CDN_URL + imageId} />
     </a>
   );
 };
