@@ -16,7 +16,7 @@ const Header = () => {
   });
 
   return (
-    <header className='shadow-xl'>
+    <header className='shadow-xl sticky top-0 left-0 z-10 bg-white'>
       <div className='flex justify-between max-w-7xl mx-auto p-2 items-center '>
         <div className='flex items-center '>
           <Link to='/'>
