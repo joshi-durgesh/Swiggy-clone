@@ -1,7 +1,20 @@
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
+  const onlineStatus = useOnlineStatus();
+
+  useEffect(() => {
+    if (onlineStatus) {
+      document.getElementById("online-status").style.color = "green";
+    }
+    if (!onlineStatus) {
+      document.getElementById("online-status").style.color = "red";
+    }
+  });
+
   return (
     <header className='shadow-xl'>
       <div className='flex justify-between max-w-7xl mx-auto p-2 items-center '>
@@ -20,6 +33,9 @@ const Header = () => {
         </div>
         <nav className=''>
           <ul className='flex gap-6'>
+            <li>
+              <span className='bi bi-wifi text-xl' id='online-status'></span>
+            </li>
             <li className='hover:text-orange-600'>
               <Link to='/search'>
                 <span className='bi bi-search mr-1'></span>Search
