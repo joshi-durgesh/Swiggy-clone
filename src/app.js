@@ -6,9 +6,9 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 //components
 import Header from "./component/Header";
 import Body from "./component/Body";
-import Offers from "./component/Offers";
+import About from "./component/About";
 import Search from "./component/Search";
-import Help from "./component/Help";
+import Contact from "./component/Contact";
 import SignIn from "./component/SignIn";
 import Cart from "./component/Cart";
 import ErrorPage from "./component/ErrorPage";
@@ -35,16 +35,16 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/offers",
-        element: <Offers />,
+        path: "/about",
+        element: <About />,
       },
       {
         path: "/search",
         element: <Search />,
       },
       {
-        path: "/help",
-        element: <Help />,
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/signin",

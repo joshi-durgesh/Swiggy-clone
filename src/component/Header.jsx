@@ -26,13 +26,13 @@ const Header = () => {
               </Link>
             </li>
             <li className='hover:text-orange-600'>
-              <Link to='/offers'>
-                <span className='bi bi-percent mr-1'></span> Offers
+              <Link to='/about'>
+                <span className='bi bi-patch-question mr-1'></span> About
               </Link>
             </li>
             <li className='hover:text-orange-600'>
-              <Link to='/help'>
-                <span className='bi bi-patch-question mr-1'></span> Help
+              <Link to='/contact'>
+                <span className='bi bi-headset mr-1'></span> Contact
               </Link>
             </li>
             <li className='hover:text-orange-600'>

@@ -1,21 +1,11 @@
-import MENU_API from "../utils/constant";
-import { useEffect, useState } from "react";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { BannerSkimmers } from "./Skimmer";
 import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
-  const [menuData, setMenuData] = useState(null);
   const { resId } = useParams();
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId);
-    const json = await data.json();
-    setMenuData(json);
-  };
+  const menuData = useRestaurantMenu(resId);
 
   if (menuData === null) return <BannerSkimmers />;
 
