@@ -5,6 +5,8 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "jest"
   },
   "repository": {
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/joshi-durgesh/Swiggy-clone.git"
   },
-  "homepage": "https://github.com/joshi-durgesh/Swiggy-clone.git#readme",
+  "homepage": "https://github.com/joshi-durgesh/Swiggy-clone.git",
   "devDependencies": {
     "gh-pages": "^6.1.1",
     "parcel": "^2.11.0",
