@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { OffersRestaurantCard } from "./RestaurantCard";
 
 const AllRestaurant = ({ data, title }) => {
   const [allRestoData] = useState(data);
+
+  // const OffersCard = OffersRestaurantCard(<RestaurantCard />);
+  // console.log(OffersCard);
 
   return (
     <section className='max-w-6xl mx-auto pb-7'>
@@ -11,6 +14,11 @@ const AllRestaurant = ({ data, title }) => {
 
       <div className='flex flex-wrap gap-2'>
         {allRestoData.map((data) => {
+          // const offers = data.info.aggregatedDiscountInfoV3;
+          // if (offers) {
+          //   const offerDetail = `${offers.header} ${offers.subHeader}`;
+          //   return <OffersCard key={data.info.id} resData={data} />;
+          // }
           return <RestaurantCard key={data.info.id} resData={data} />;
         })}
       </div>
