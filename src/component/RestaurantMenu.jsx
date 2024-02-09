@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const menuData = useRestaurantMenu(resId);
-  const [showIndex, setShowIndex] = useState(0);
+  const [showIndex, setShowIndex] = useState(null);
 
   if (menuData === null) return <BannerSkimmers />;
 
@@ -33,7 +33,9 @@ const RestaurantMenu = () => {
               list={item}
               key={item?.card?.card?.title}
               showItem={index === showIndex ? true : false}
-              setShowIndex={() => setShowIndex(index)}
+              setShowIndex={() =>
+                setShowIndex(index === showIndex ? null : index)
+              }
             />
           );
         })}
