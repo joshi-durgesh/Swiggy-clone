@@ -1,13 +1,13 @@
 import RestaurantCuisineAllItems from "./RestaurantCuisineAllItems";
-import { useState } from "react";
 
-const RestaurantCuisineCategory = ({ list }) => {
+const RestaurantCuisineCategory = ({ list, showItem, setShowIndex }) => {
   const { itemCards, title } = list?.card?.card;
-  const [showItem, setShowItem] = useState(false);
+  // const [showItem, setShowItem] = useState(false);
 
   const clickHandler = () => {
     console.log("clicked");
-    showItem ? setShowItem(false) : setShowItem(true);
+    //  setShowItem(!showItem);
+    setShowIndex();
   };
 
   return (
