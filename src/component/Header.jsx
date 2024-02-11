@@ -2,9 +2,14 @@ import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const onlineStatus = useOnlineStatus();
+
+  const cartItems = useSelector((store) => store.cart.items);
+
+  console.log(cartItems);
 
   useEffect(() => {
     if (onlineStatus) {
@@ -58,7 +63,8 @@ const Header = () => {
             </li>
             <li className='hover:text-orange-600'>
               <Link to='/cart'>
-                <span className='bi bi-box2 mr-1 '></span> Cart
+                <span className='bi bi-box2 mr-1 '></span> Cart (
+                {cartItems.length})
               </Link>
             </li>
           </ul>

@@ -2,6 +2,7 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
 
 //components
 import Header from "./component/Header";
@@ -12,15 +13,18 @@ import Contact from "./component/Contact";
 import SignIn from "./component/SignIn";
 import Cart from "./component/Cart";
 import ErrorPage from "./component/ErrorPage";
+import appStore from "./utils/appStore";
 const RestaurantMenu = lazy(() => import("./component/RestaurantMenu"));
 
 const MainContent = () => {
   return (
-    <React.Fragment>
-      <Header />
-      {/* Outlet is used for replacing children according to the link */}
-      <Outlet />
-    </React.Fragment>
+    <Provider store={appStore}>
+      <React.Fragment>
+        <Header />
+        {/* Outlet is used for replacing children according to the link */}
+        <Outlet />
+      </React.Fragment>
+    </Provider>
   );
 };
 
