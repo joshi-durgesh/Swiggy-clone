@@ -5,7 +5,6 @@ const RestaurantCuisineCategory = ({ list, showItem, setShowIndex }) => {
   // const [showItem, setShowItem] = useState(false);
 
   const clickHandler = () => {
-    console.log("clicked");
     //  setShowItem(!showItem);
     setShowIndex();
   };
@@ -20,6 +19,7 @@ const RestaurantCuisineCategory = ({ list, showItem, setShowIndex }) => {
         <span className='bi bi-caret-down-fill mr-5'></span>
       </div>
       {showItem && <RestaurantCuisineAllItems itemCards={itemCards} />}
+      <div className='h-4 w-auto bg-slate-100'></div>
     </div>
   );
 };

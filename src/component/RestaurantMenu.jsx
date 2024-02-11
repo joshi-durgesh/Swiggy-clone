@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const menuData = useRestaurantMenu(resId);
-  const [showIndex, setShowIndex] = useState(null);
+  const [showIndex, setShowIndex] = useState(1);
 
   if (menuData === null) return <BannerSkimmers />;
 
