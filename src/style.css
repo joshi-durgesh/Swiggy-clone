@@ -7,3 +7,126 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.banner-skimmer-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #cfcfcf;
+}
+
+.banner-skimmer-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.banner-skimmer-content {
+  display: flex;
+  gap: 25px;
+}
+
+.banner-skimmer {
+  width: 140px;
+  height: 160px;
+  background-color: #eaeaea;
+}
+
+.banner-skimmer-title {
+  width: 400px;
+  height: 30px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+
+.banner-skimmer-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.banner-skimmer-btns div {
+  width: 30px;
+  height: 30px;
+  border-radius: 40px;
+  background-color: #eaeaea;
+}
+.banner-skimmer-btns div:last-child {
+  background-color: #d8d8d8;
+}
+
+.resto-skimmer-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.resto-header-skimmer {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.resto-header-skimmer-title {
+  width: 400px;
+  height: 30px;
+  background-color: #eaeaea;
+}
+
+.resto-header-skimmer-search {
+  width: 400px;
+  height: 30px;
+  background-color: #eaeaea;
+}
+
+.resto-top-filter-skimmer {
+  width: 100px;
+  height: 30px;
+  background-color: #eaeaea;
+  border-radius: 4px;
+}
+
+.resto-card-skimmer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-img-skimmer {
+  width: 260px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: #eaeaea;
+  margin-left: -10px;
+}
+
+.card-title-skimmer {
+  width: 240px;
+  height: 20px;
+  background-color: #e2e2e2;
+}
+
+.card-rating-skimmer {
+  width: 200px;
+  height: 20px;
+  background-color: #eaeaea;
+}
+
+.card-cuisine-skimmer {
+  width: 220px;
+  height: 20px;
+  background-color: #e2e2e2;
+}
+
+.card-locality-skimmer {
+  width: 160px;
+  height: 20px;
+  background-color: #e2e2e2;
+}
+
+.resto-item-skimmer {
+  display: flex;
+  gap: 40px;
+}

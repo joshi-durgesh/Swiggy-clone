@@ -54,10 +54,4 @@ const RestaurantCard = ({ resData }) => {
   );
 };
 
-export const OffersRestaurantCard = (restoCard) => {
-  return (props) => {
-    console.log(props);
-  };
-};
-
 export default RestaurantCard;

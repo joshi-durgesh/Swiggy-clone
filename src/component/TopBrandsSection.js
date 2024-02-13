@@ -4,7 +4,6 @@ import SlidingContentBtn from "./SlidingContentBtn";
 const TopBrandsSection = ({ data }) => {
   const { title } = data?.header;
   const topBrands = data?.gridElements?.infoWithStyle?.restaurants;
-  console.log(title);
 
   return (
     <section className='max-w-6xl mx-auto overflow-hidden mt-7 p-2 pb-7 border-b-2 mb-6'>

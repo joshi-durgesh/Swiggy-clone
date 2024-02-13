@@ -6,6 +6,8 @@ const RestaurantCuisineItems = ({ items }) => {
   const { name, price, description, id, imageId, isVeg, defaultPrice, ribbon } =
     items;
 
+  console.log(items);
+
   const Dispatch = useDispatch();
 
   const handleAddItem = (item) => {

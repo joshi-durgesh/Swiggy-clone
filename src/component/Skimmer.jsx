@@ -1,26 +1,3 @@
-export const BannerSkimmers = () => {
-  return (
-    <div className='banner-skimmer-container'>
-      <div className='banner-skimmer-header'>
-        <div className='banner-skimmer-title'></div>
-        <div className='banner-skimmer-btns'>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <div className='banner-skimmer-content'>
-        <div className='banner-skimmer'></div>
-        <div className='banner-skimmer'></div>
-        <div className='banner-skimmer'></div>
-        <div className='banner-skimmer'></div>
-        <div className='banner-skimmer'></div>
-        <div className='banner-skimmer'></div>
-        <div className='banner-skimmer'></div>
-      </div>
-    </div>
-  );
-};
-
 const CardSkimmer = () => {
   return (
     <div className='resto-card-skimmer'>
@@ -33,7 +10,7 @@ const CardSkimmer = () => {
   );
 };
 
-export const TopRestoSkimmers = () => {
+const TopRestoSkimmers = () => {
   return (
     <div className='resto-skimmer-container'>
       <div className='resto-header-skimmer'>
@@ -48,5 +25,31 @@ export const TopRestoSkimmers = () => {
         <CardSkimmer />
       </div>
     </div>
+  );
+};
+
+export const BannerSkimmers = () => {
+  return (
+    <>
+      <div className='banner-skimmer-container'>
+        <div className='banner-skimmer-header'>
+          <div className='banner-skimmer-title'></div>
+          <div className='banner-skimmer-btns'>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className='banner-skimmer-content'>
+          <div className='banner-skimmer'></div>
+          <div className='banner-skimmer'></div>
+          <div className='banner-skimmer'></div>
+          <div className='banner-skimmer'></div>
+          <div className='banner-skimmer'></div>
+          <div className='banner-skimmer'></div>
+          <div className='banner-skimmer'></div>
+        </div>
+      </div>
+      <TopRestoSkimmers />
+    </>
   );
 };

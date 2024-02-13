@@ -9,8 +9,6 @@ const Header = () => {
 
   const cartItems = useSelector((store) => store.cart.items);
 
-  console.log(cartItems);
-
   useEffect(() => {
     if (onlineStatus) {
       document.getElementById("online-status").style.color = "green";
@@ -36,16 +34,16 @@ const Header = () => {
             <span className='bi bi-chevron-down loc-arrow'></span>
           </Link>
         </div>
-        <nav className=''>
+        <nav className='font-semibold'>
           <ul className='flex gap-6'>
             <li>
               <span className='bi bi-wifi text-xl' id='online-status'></span>
             </li>
-            <li className='hover:text-orange-600'>
+            {/* <li className='hover:text-orange-600'>
               <Link to='/search'>
                 <span className='bi bi-search mr-1'></span>Search
               </Link>
-            </li>
+            </li> */}
             <li className='hover:text-orange-600'>
               <Link to='/about'>
                 <span className='bi bi-patch-question mr-1'></span> About
