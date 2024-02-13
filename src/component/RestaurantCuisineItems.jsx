@@ -1,8 +1,16 @@
+import { useDispatch } from "react-redux";
+import { addItems } from "../utils/cartSlice";
 import { CDN_URL } from "../utils/constant";
 
 const RestaurantCuisineItems = ({ items }) => {
   const { name, price, description, id, imageId, isVeg, defaultPrice, ribbon } =
     items;
+
+  const Dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    Dispatch(addItems(item));
+  };
 
   return (
     <div className='flex mb-4 pb-5 border-b-[1px] items-center border-b-neutral-300'>
@@ -27,7 +35,10 @@ const RestaurantCuisineItems = ({ items }) => {
         <div className='text-[12px] text-neutral-400'>{description}</div>
       </div>
       <div className=' basis-2/12 flex items-center relative'>
-        <button className='absolute bottom-[-4px] left-4 px-7 border-neutral-400 border-[1px] py-1 bg-white text-green-600 font-bold rounded-md shadow-md shadow-stone-100 drop-shadow-md'>
+        <button
+          className='absolute bottom-[-4px] left-4 px-7 border-neutral-400 border-[1px] py-1 bg-white text-green-600 font-bold rounded-md shadow-md shadow-stone-100 drop-shadow-md'
+          onClick={() => handleAddItem(items)}
+        >
           ADD
         </button>
         <div className='w-28 h-24  m-2 rounded-lg overflow-hidden '>
