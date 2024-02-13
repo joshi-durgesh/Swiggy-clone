@@ -1,4 +1,4 @@
-node_modules
-.parcel-cache
-dist
-coverage
+node_modules/
+.parcel-cache/
+dist/
+coverage/
