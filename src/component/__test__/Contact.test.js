@@ -27,5 +27,5 @@ test("checking the inputs in cotact us page", () => {
   render(<Contact />);
   const inputs = screen.getAllByRole("textbox");
 
-  expect(inputs).toBeInTheDocument();
+  expect(inputs.length).toBe(2);
 });
