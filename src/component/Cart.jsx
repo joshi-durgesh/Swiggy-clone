@@ -29,7 +29,7 @@ const Cart = () => {
     <section className=' max-w-2xl mx-auto mt-[180px] '>
       <div className='flex justify-center flex-col items-center'>
         <img
-          src='https://shidory.com/assets/images/empty_cart.webp'
+          src={require("../../public/images/empty_cart.webp")}
           className='w-[350px] mb-4'
         />
         <p className='mb-3 text-xl text-neutral-600 font-bold'>

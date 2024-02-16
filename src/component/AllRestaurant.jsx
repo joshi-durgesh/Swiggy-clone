@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import RestaurantCard, { OffersRestaurantCard } from "./RestaurantCard";
+import SlidingContentBtn from "./SlidingContentBtn";
 
 const AllRestaurant = ({ data, title }) => {
   const [allRestoData] = useState(data);
@@ -8,11 +9,16 @@ const AllRestaurant = ({ data, title }) => {
   // console.log(OffersCard);
 
   return (
-    <section className='max-w-6xl mx-auto pb-7'>
-      <h2 className='text-2xl font-bold mb-4'>{title}</h2>
-      <div className='mb-3'>buttons</div>
+    <section className='max-w-6xl mx-auto pb-7 overflow-hidden  border-b-2'>
+      <div className='flex justify-between mb-7'>
+        <h2 className='text-2xl font-bold mb-4'>{title}</h2>
+        <div className='flex gap-3'>
+          <SlidingContentBtn section='toresto' side='left' />
+          <SlidingContentBtn section='toresto' side='right' />
+        </div>
+      </div>
 
-      <div className='flex flex-wrap gap-2'>
+      <div className='flex  gap-2'>
         {allRestoData.map((data) => {
           // const offers = data.info.aggregatedDiscountInfoV3;
           // if (offers) {

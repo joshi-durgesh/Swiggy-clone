@@ -38,8 +38,8 @@ const Body = () => {
   return (
     <>
       <BannerSection data={bannerData} />
-      <TopBrandsSection data={topBrandData} />
       <AllRestaurant data={allRestoData} title={allRestoSectionTitle} />
+      <TopBrandsSection data={topBrandData} />
     </>
   );
 };
