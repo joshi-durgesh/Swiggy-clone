@@ -25,7 +25,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='h-[100vh]'>
         <h2>About</h2>
         <UsersClass name={this.state.name} location={this.state.location} />
       </div>

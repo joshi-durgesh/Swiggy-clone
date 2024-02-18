@@ -1,14 +1,10 @@
 const Footer = () => {
   return (
-    <section>
-      <div>
-        <p>For better experience,download the Swiggy app now</p>
-        {/* <div>
-          <img src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png' />
-          <img src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png' />
-        </div> */}
+    <section className='bg-cyan-800 mt-8'>
+      <div className='text-center text-md text-[#ffb545] p-2'>
+        &copy; {new Date().getFullYear()}. All rights reserved. Made by 😎
+        Durgesh Joshi.
       </div>
-      <div></div>
     </section>
   );
 };

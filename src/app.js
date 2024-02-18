@@ -11,10 +11,10 @@ import Body from "./component/Body";
 import About from "./component/About";
 import Search from "./component/Search";
 import Contact from "./component/Contact";
-import SignIn from "./component/SignIn";
 import Cart from "./component/Cart";
 import ErrorPage from "./component/ErrorPage";
 import appStore from "./utils/appStore";
+import UserAccount from "./component/UserAccount";
 const RestaurantMenu = lazy(() => import("./component/RestaurantMenu"));
 
 const MainContent = () => {
@@ -54,8 +54,8 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/signin",
-        element: <SignIn />,
+        path: "/user-info",
+        element: <UserAccount />,
       },
       {
         path: "/cart",
