@@ -20,7 +20,7 @@ const RestaurantMenu = lazy(() => import("./component/RestaurantMenu"));
 const MainContent = () => {
   return (
     <Provider store={appStore}>
-      <div className='bg-sky-950'>
+      <div className='bg-cyan-950'>
         <Header />
         {/* Outlet is used for replacing children according to the link */}
         <Outlet />

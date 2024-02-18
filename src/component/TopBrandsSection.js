@@ -6,7 +6,7 @@ const TopBrandsSection = ({ data }) => {
 
   return (
     <section className='max-w-6xl mx-auto  mt-7 p-2 pb-7 mb-6'>
-      <h2 className='text-2xl font-bold text-blue-300 mb-7'>{title}</h2>
+      <h2 className='text-2xl font-bold text-[#ffb545] mb-7'>{title}</h2>
       {/* <div className='mb-3'>buttons</div> */}
 
       <div className='flex  flex-wrap gap-1'>

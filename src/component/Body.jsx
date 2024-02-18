@@ -5,6 +5,7 @@ import AllRestaurant from "./AllRestaurant";
 import { SWIGGY_API } from "../utils/constant";
 import { BannerSkimmers } from "./Skimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import HeroSection from "./HeroSection";
 
 const Body = () => {
   const [allData, setAllData] = useState(null);
@@ -37,6 +38,7 @@ const Body = () => {
 
   return (
     <>
+      <HeroSection />
       <BannerSection data={bannerData} />
       <AllRestaurant data={allRestoData} title={allRestoSectionTitle} />
       <TopBrandsSection data={topBrandData} />
