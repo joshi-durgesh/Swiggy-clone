@@ -1,17 +1,14 @@
-import { useState, useEffect } from "react";
-import RestaurantCard, { OffersRestaurantCard } from "./RestaurantCard";
+import { useState } from "react";
+import RestaurantCard from "./RestaurantCard";
 import SlidingContentBtn from "./SlidingContentBtn";
 
 const AllRestaurant = ({ data, title }) => {
   const [allRestoData] = useState(data);
 
-  // const OffersCard = OffersRestaurantCard(<RestaurantCard />);
-  // console.log(OffersCard);
-
   return (
     <section className='max-w-6xl mx-auto pb-7 overflow-hidden  border-b-2'>
       <div className='flex justify-between mb-7'>
-        <h2 className='text-2xl font-bold mb-4'>{title}</h2>
+        <h2 className='text-2xl font-bold mb-4 text-blue-300'>{title}</h2>
         <div className='flex gap-3'>
           <SlidingContentBtn section='toresto' side='left' />
           <SlidingContentBtn section='toresto' side='right' />
@@ -19,12 +16,7 @@ const AllRestaurant = ({ data, title }) => {
       </div>
 
       <div className='flex  gap-2'>
-        {allRestoData.map((data) => {
-          // const offers = data.info.aggregatedDiscountInfoV3;
-          // if (offers) {
-          //   const offerDetail = `${offers.header} ${offers.subHeader}`;
-          //   return <OffersCard key={data.info.id} resData={data} />;
-          // }
+        {allRestoData?.map((data) => {
           return <RestaurantCard key={data.info.id} resData={data} />;
         })}
       </div>

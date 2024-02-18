@@ -16,7 +16,7 @@ const Body = () => {
   const fetchAllData = async () => {
     const data = await fetch(SWIGGY_API);
     const json = await data.json();
-    setAllData(json.data.cards);
+    setAllData(json?.data?.cards);
   };
 
   const onlineStatus = useOnlineStatus();

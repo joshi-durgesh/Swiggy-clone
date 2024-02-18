@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 
 //components
 import Header from "./component/Header";
+import Footer from "./component/Footer";
 import Body from "./component/Body";
 import About from "./component/About";
 import Search from "./component/Search";
@@ -19,11 +20,12 @@ const RestaurantMenu = lazy(() => import("./component/RestaurantMenu"));
 const MainContent = () => {
   return (
     <Provider store={appStore}>
-      <React.Fragment>
+      <div className='bg-sky-950'>
         <Header />
         {/* Outlet is used for replacing children according to the link */}
         <Outlet />
-      </React.Fragment>
+        <Footer />
+      </div>
     </Provider>
   );
 };
