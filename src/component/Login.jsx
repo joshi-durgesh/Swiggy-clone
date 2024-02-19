@@ -10,7 +10,7 @@ const Login = () => {
     user
       ? user[phoneNumber]
         ? setValidationMsg("success")
-        : setValidationMsg("Invalid phone number")
+        : setValidationMsg("User not found, check your phone number")
       : setValidationMsg("no user found");
   };
 

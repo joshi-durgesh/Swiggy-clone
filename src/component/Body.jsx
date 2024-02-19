@@ -9,13 +9,15 @@ import HeroSection from "./HeroSection";
 
 const Body = () => {
   const [allData, setAllData] = useState(null);
+  const defaulLocation = "lat=17.4356874&lng=78.4331776";
+  const [location, setLocation] = useState(defaulLocation);
 
   useEffect(() => {
     fetchAllData();
-  }, []);
+  }, [location]);
 
   const fetchAllData = async () => {
-    const data = await fetch(SWIGGY_API);
+    const data = await fetch(SWIGGY_API + location);
     const json = await data.json();
     setAllData(json?.data?.cards);
   };
@@ -38,7 +40,7 @@ const Body = () => {
 
   return (
     <>
-      <HeroSection />
+      <HeroSection setLocation={setLocation} />
       <BannerSection data={bannerData} />
       <AllRestaurant data={allRestoData} title={allRestoSectionTitle} />
       <TopBrandsSection data={topBrandData} />
