@@ -16,4 +16,3 @@ const BannerItem = ({ banData }) => {
   );
 };
 export default BannerItem;
-// rgb(147, 197, 253);
